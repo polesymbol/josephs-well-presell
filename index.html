@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joseph's Well: The Backyard Device That Makes Water From Air?</title>
+<meta name="description" content="An independent, no-hype review of Joseph's Well — the build-it-yourself device its inventor says pulls drinking water from the air. What's included, what it costs, how we evaluated it, and whether it's worth your look.">
+<!-- ============================================================
+  MATCHING META AD COPY (keep ad + page message-aligned):
+  Primary text: "He says his backyard device makes drinking water
+  out of thin air. No well. No plumbing. We read the plans, checked
+  the physics, and wrote up what's actually inside — including what
+  it costs and who it's really for."
+  Headline: "Joseph's Well: Independent Review"
+  Description: "See what's included before you decide."
+  CTA button: Learn More
+  ============================================================ -->
+
+<!-- META PIXEL — TODO (Pratik): replace PIXEL_ID with your Meta Pixel ID.
+     Without this, the $10/day test buys traffic it can't learn from. -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'PIXEL_ID');
+fbq('track', 'PageView');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0e1512; --bg2:#131c17; --card:#182420; --line:#24352d;
+    --ink:#eef3ee; --muted:#a9b8ad; --faint:#7d8d82;
+    --gold:#e8b04b; --gold2:#f5cf7d; --aqua:#7fd4c1; --red:#e26d5a;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;
+    line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  ::selection{background:var(--gold);color:#111}
+  .wrap{max-width:720px;margin:0 auto;padding:0 22px}
+  .glow{position:fixed;inset:0;pointer-events:none;z-index:0;
+    background:
+      radial-gradient(600px 400px at 85% -5%, rgba(232,176,75,.09), transparent 60%),
+      radial-gradient(700px 500px at 10% 30%, rgba(127,212,193,.05), transparent 60%);}
+  .topbar{position:sticky;top:0;z-index:50;background:rgba(14,21,18,.9);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line)}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px}
+  .brand{font-family:'Fraunces',serif;font-weight:700;letter-spacing:.06em;font-size:13px;color:var(--gold2);text-transform:uppercase}
+  .brand span{color:var(--faint);font-family:'Inter';font-weight:500;letter-spacing:.02em;text-transform:none}
+  .top-cta{font-size:13px;font-weight:700;color:#111;background:var(--gold);padding:9px 16px;border-radius:99px;
+    text-decoration:none;transition:transform .15s ease, box-shadow .15s ease;white-space:nowrap}
+  .top-cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(232,176,75,.35)}
+  header.hero{position:relative;z-index:1;padding:60px 0 36px;text-align:center}
+  .eyebrow{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--aqua);border:1px solid rgba(127,212,193,.35);border-radius:99px;padding:7px 16px;margin-bottom:22px}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(30px,6.6vw,46px);line-height:1.18;letter-spacing:-.01em}
+  h1 em{font-style:normal;color:var(--gold2)}
+  .lede{color:var(--muted);font-size:17px;max-width:580px;margin:18px auto 0}
+  .cta-row{margin-top:28px;display:flex;flex-direction:column;gap:12px;align-items:center}
+  .btn{display:inline-block;background:linear-gradient(180deg,var(--gold2),var(--gold));color:#14100a;font-weight:800;
+    font-size:17px;padding:16px 38px;border-radius:14px;text-decoration:none;
+    box-shadow:0 10px 30px rgba(232,176,75,.28), inset 0 1px 0 rgba(255,255,255,.5);
+    transition:transform .15s ease, box-shadow .15s ease}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(232,176,75,.4)}
+  .btn small{display:block;font-weight:600;font-size:12px;opacity:.7;margin-top:2px}
+  .btn.ghost{background:transparent;color:var(--aqua);border:1px solid rgba(127,212,193,.5);box-shadow:none;font-size:15px;padding:13px 30px}
+  .micro{font-size:12.5px;color:var(--faint)}
+  .disclosure{background:rgba(232,176,75,.07);border:1px dashed rgba(232,176,75,.45);border-radius:12px;
+    padding:14px 18px;font-size:13px;color:var(--muted);margin:30px 0 0;text-align:left}
+  .disclosure strong{color:var(--gold2)}
+  section{position:relative;z-index:1;padding:32px 0}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+  h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(24px,5vw,32px);line-height:1.25;margin-bottom:14px}
+  p{color:var(--muted);margin-bottom:14px;font-size:16px}
+  p strong, li strong{color:var(--ink)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin:20px 0}
+  .howgrid{display:grid;gap:12px;margin:20px 0}
+  .howcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;text-align:center}
+  .howcard svg{display:block;margin:0 auto 10px}
+  .howcard h3{font-size:15px;margin-bottom:6px}
+  .howcard p{font-size:13.5px;margin:0}
+  @media(min-width:600px){.howgrid{grid-template-columns:1fr 1fr 1fr}}
+  ul.ticks{list-style:none;margin:6px 0}
+  ul.ticks li{position:relative;padding-left:30px;margin-bottom:12px;color:var(--muted);font-size:15.5px}
+  ul.ticks li::before{content:"✓";position:absolute;left:0;color:var(--aqua);font-weight:800}
+  ul.cross li::before{content:"✕";color:var(--red)}
+  .cols{display:grid;gap:14px}
+  @media(min-width:640px){.cols{grid-template-columns:1fr 1fr}}
+  .qualifier{border-left:3px solid var(--aqua);padding:4px 0 4px 18px;margin:18px 0}
+  .qualifier p{font-size:15px}
+  /* lead magnet */
+  .leadbox{background:linear-gradient(180deg,#1a2a22,#141f1a);border:1px solid rgba(127,212,193,.35);
+    border-radius:18px;padding:30px 26px;text-align:center;margin:8px 0}
+  .leadbox h2{font-size:clamp(22px,4.6vw,28px)}
+  .leadbox p{font-size:15px}
+  .leadbox form{display:flex;flex-direction:column;gap:10px;margin-top:18px}
+  .leadbox input{padding:14px 16px;border-radius:12px;border:1px solid var(--line);background:#0e1512;
+    color:var(--ink);font-size:15px;font-family:inherit}
+  .leadbox input:focus{outline:none;border-color:var(--aqua)}
+  .leadbox .fine{font-size:12px;color:var(--faint);margin:4px 0 0}
+  /* faq */
+  details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin-bottom:10px}
+  summary{cursor:pointer;font-weight:600;font-size:15.5px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--gold);font-size:20px;font-weight:700;flex:0 0 auto}
+  details[open] summary::after{content:"–"}
+  details p{margin:10px 0 2px;font-size:15px}
+  .final{background:linear-gradient(180deg,var(--bg2),#0c120f);border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);text-align:center;padding:56px 0}
+  .payoff{list-style:none;max-width:440px;margin:20px auto;text-align:left}
+  .payoff li{position:relative;padding-left:30px;margin-bottom:10px;color:var(--muted);font-size:15px}
+  .payoff li::before{content:"▸";position:absolute;left:0;color:var(--gold);font-weight:800}
+  .sticky{position:fixed;bottom:0;left:0;right:0;z-index:60;background:rgba(14,21,18,.94);backdrop-filter:blur(10px);
+    border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+    display:flex;align-items:center;gap:12px;transform:translateY(110%);transition:transform .3s ease}
+  .sticky.show{transform:translateY(0)}
+  .sticky .btn{flex:1;padding:13px 10px;font-size:15px;text-align:center;border-radius:12px}
+  .sticky .btn small{display:none}
+  footer{position:relative;z-index:1;padding:36px 0 110px;font-size:12.5px;color:var(--faint)}
+  footer p{font-size:12.5px;margin-bottom:10px}
+  .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  .rv.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="glow"></div>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="brand">Field Report <span>· water security</span></div>
+    <a class="top-cta" data-aff href="#">See how it works</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow rv">An independent review</div>
+    <h1 class="rv">What if your backup water supply was <em>already in your backyard?</em></h1>
+    <p class="lede rv">Joseph&rsquo;s Well is a build-it-yourself device its inventor says pulls drinking water straight from the air. We read the plans, checked the physics, and wrote up what&rsquo;s actually inside &mdash; including what it costs and who it&rsquo;s really for.</p>
+    <div class="cta-row rv">
+      <a class="btn" data-aff href="#">See How It Works<small>Free presentation · decide for yourself</small></a>
+      <a class="btn ghost" href="#checklist">Get the free water checklist first</a>
+    </div>
+    <div class="disclosure rv"><strong>Affiliate disclosure:</strong> we&rsquo;re an independent reviewer and a Digistore24 affiliate for this product. If you buy through our links, we may earn a commission at no extra cost to you &mdash; that&rsquo;s what keeps reviews like this free.</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section>
+  <div class="kicker rv">How we evaluated this</div>
+  <h2 class="rv">Straight with you from the start</h2>
+  <div class="card rv">
+    <ul class="ticks">
+      <li>Read the inventor&rsquo;s <strong>full materials and affiliate documentation</strong>, not just the sales page.</li>
+      <li>Checked the concept against <strong>established atmospheric-water physics</strong> &mdash; commercial versions of this technology exist.</li>
+      <li>Read the <strong>vendor&rsquo;s affiliate terms</strong> so everything we say stays within what&rsquo;s allowed.</li>
+      <li>Being plain: <strong>we haven&rsquo;t built one ourselves</strong>, so we don&rsquo;t pretend to review the build quality. We review the <em>offer</em> &mdash; what&rsquo;s claimed, what&rsquo;s included, and whether it&rsquo;s worth your look.</li>
+    </ul>
+  </div>
+  <p class="rv">There&rsquo;s an old idea behind the name &mdash; that providing for your household is a duty, not a hope. Whether or not you share the faith framing, the preparedness instinct is the same: <strong>don&rsquo;t be the person wishing they&rsquo;d prepared sooner.</strong></p>
+</section>
+
+<section>
+  <div class="kicker rv">What you actually get</div>
+  <h2 class="rv">Inside the package</h2>
+  <p class="rv">Joseph&rsquo;s Well isn&rsquo;t a gadget that arrives in a box. It&rsquo;s a <strong>digital blueprint package</strong>:</p>
+  <div class="card rv">
+    <ul class="ticks">
+      <li><strong>Step-by-step building plans</strong> for assembling the unit yourself.</li>
+      <li><strong>Video walkthroughs</strong> showing the build process.</li>
+      <li><strong>A complete parts list</strong> &mdash; the inventor says the components are commonly available, no specialist suppliers needed.</li>
+      <li><strong>Price: $84.82</strong> at the time we checked. Vendors change pricing, so confirm on the official page at checkout.</li>
+    </ul>
+  </div>
+  <p class="rv micro">For guarantee and refund terms, read the official page before buying &mdash; as you should with anything.</p>
+</section>
+
+<section>
+  <div class="kicker rv">The concept</div>
+  <h2 class="rv">How it&rsquo;s supposed to work</h2>
+  <p class="rv">The idea is straightforward &mdash; the same physics behind morning dew, engineered into a backyard unit:</p>
+  <div class="howgrid">
+    <div class="howcard rv">
+      <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#7fd4c1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2"/><path d="M12.59 19.41A2 2 0 1 0 14 16H2"/><path d="M17.73 7.73A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+      <h3>1. Draw in air</h3>
+      <p>The unit pulls in surrounding air &mdash; the inventor says ordinary outdoor humidity is enough.</p>
+    </div>
+    <div class="howcard rv">
+      <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#7fd4c1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7S6 11 6 15a6 6 0 0 0 12 0c0-4-6-12.3-6-12.3z"/></svg>
+      <h3>2. Condense moisture</h3>
+      <p>Cooling forces water vapor to condense into liquid &mdash; dew, on demand.</p>
+    </div>
+    <div class="howcard rv">
+      <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#7fd4c1" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 8l7-5 7 5"/><path d="M5 16l7 5 7-5"/></svg>
+      <h3>3. Filter &amp; collect</h3>
+      <p>Collected water passes through filtration before storage, per the inventor&rsquo;s design.</p>
+    </div>
+  </div>
+  <div class="qualifier rv">
+    <p><strong>Be honest with yourself:</strong> this is a plans-and-parts project, not a plug-in appliance. If you won&rsquo;t build anything yourself, this isn&rsquo;t for you &mdash; and that&rsquo;s fine. If you like the idea of one more layer of water independence, keep reading.</p>
+  </div>
+</section>
+
+<section id="checklist">
+  <div class="leadbox rv">
+    <div class="kicker" style="margin-bottom:10px">Free download</div>
+    <h2>Not ready to decide? Start here.</h2>
+    <p>Get the <strong style="color:var(--ink)">72-Hour Home Water Checklist</strong> &mdash; 12 things to have ready before the tap runs dry. Free, no fluff.</p>
+    <!-- EMAIL CAPTURE — TODO (Pratik): replace this placeholder form with your
+         Brevo embedded form code. Until then the form does nothing. -->
+    <form id="leadForm" action="PASTE_BREVO_FORM_ACTION_HERE" method="POST">
+      <input type="text" name="name" placeholder="Your first name" autocomplete="given-name">
+      <input type="email" name="email" placeholder="Your email address" required autocomplete="email">
+      <button class="btn" type="submit" style="border:none;cursor:pointer;width:100%">Send me the checklist</button>
+      <p class="fine">We&rsquo;ll email the checklist once. No spam, unsubscribe anytime.</p>
+    </form>
+  </div>
+</section>
+
+<section>
+  <div class="kicker rv">Bottom line</div>
+  <h2 class="rv">Worth your look?</h2>
+  <p class="rv">The <em>concept</em> is legitimate physics &mdash; atmospheric water generation is established technology. What Joseph&rsquo;s Well sells is a shortcut: tested plans, a parts list, and video guidance instead of figuring it out alone. Whether that shortcut is worth $84.82 to you depends on how much you value water independence &mdash; and whether you&rsquo;ll actually build it.</p>
+  <p class="rv">The inventor&rsquo;s presentation walks through the build, the parts, and what output to realistically expect. It&rsquo;s free to watch, and it&rsquo;s the fastest way to decide.</p>
+</section>
+
+</div>
+
+<div class="final">
+  <div class="wrap">
+    <div class="kicker rv">The next step</div>
+    <h2 class="rv">See the full breakdown from the inventor</h2>
+    <ul class="payoff rv">
+      <li>The exact parts list &mdash; and where to get them</li>
+      <li>How long the build actually takes</li>
+      <li>What water output to realistically expect</li>
+    </ul>
+    <div class="cta-row rv">
+      <a class="btn" data-aff href="#">Watch the Free Presentation<small>Decide for yourself · no obligation</small></a>
+    </div>
+    <p class="micro rv" style="margin-top:14px">Affiliate link &mdash; we may earn a commission at no extra cost to you.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:var(--muted)">About this page:</strong> an independent review written for information purposes. We are a Digistore24 affiliate for this product and may earn a commission on purchases made through links here. We don&rsquo;t repeat the vendor&rsquo;s claims as our own &mdash; anything about the device&rsquo;s performance comes from the inventor&rsquo;s materials.</p>
+    <p>This page is not engineering, health, or preparedness advice. Product details, pricing, and guarantee terms can change &mdash; the official page is the source of truth at checkout.</p>
+    <p>&copy; 2026 Field Report. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="sticky" id="stickyCta">
+  <a class="btn" data-aff href="#">See How It Works</a>
+</div>
+
+<script>
+var AFFILIATE_URL = "https://uswaterrevolution.com/#aff=PratikDhruve33";
+
+(function(){
+  document.querySelectorAll("[data-aff]").forEach(function(a){
+    a.setAttribute("href", AFFILIATE_URL);
+    a.setAttribute("target", "_blank");
+    a.setAttribute("rel", "nofollow sponsored noopener");
+  });
+  // placeholder lead form: warn in console until Brevo is connected
+  var form = document.getElementById("leadForm");
+  form.addEventListener("submit", function(e){
+    if (form.getAttribute("action").indexOf("PASTE_BREVO") === 0) {
+      e.preventDefault();
+      alert("Email capture isn't connected yet — the site owner needs to add the Brevo form action.");
+    }
+  });
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, {threshold: 0.12});
+  document.querySelectorAll(".rv").forEach(function(el){ io.observe(el); });
+  var sticky = document.getElementById("stickyCta");
+  var hero = document.querySelector("header.hero");
+  new IntersectionObserver(function(es){
+    es.forEach(function(e){ sticky.classList.toggle("show", !e.isIntersecting); });
+  }, {threshold: 0}).observe(hero);
+})();
+</script>
+</body>
+</html>

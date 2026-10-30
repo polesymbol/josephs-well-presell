@@ -216,13 +216,15 @@ fbq('track', 'PageView');
     <div class="kicker" style="margin-bottom:10px">Free download</div>
     <h2>Not ready to decide? Start here.</h2>
     <p>Get the <strong style="color:var(--ink)">72-Hour Home Water Checklist</strong> &mdash; 12 things to have ready before the tap runs dry. Free, no fluff.</p>
-    <!-- EMAIL CAPTURE — TODO (Pratik): replace this placeholder form with your
-         Brevo embedded form code. Until then the form does nothing. -->
-    <form id="leadForm" action="PASTE_BREVO_FORM_ACTION_HERE" method="POST">
-      <input type="text" name="name" placeholder="Your first name" autocomplete="given-name">
-      <input type="email" name="email" placeholder="Your email address" required autocomplete="email">
+    <!-- EMAIL CAPTURE — Brevo form "Joseph's Well — 72-Hour Checklist" (list:
+         Joseph's Well Leads), connected 2026-10-30. Double opt-in: Brevo emails
+         a confirmation link; the contact joins the list only after clicking it. -->
+    <form id="leadForm" action="https://c0460135.sibforms.com/serve/MUIFAG-cCqab11fmQ1V8h-7hfCYa-ZMfZtBcEgj01v15Jq8LwSXWtJQlVcWGQGiNaFzbuy-hKbM_y5yq5joVbeJN3VNA0C5ZpuGJwwfG68n88H7uXPJobkxQFZVirvU2iHnziZfRksVZRz3OZM-5lzl7WwSYHtJPbtvN6PmTGmv3WKpbn4xCZllRodQBTda4s2VPQWiF3Suwt8o_qw==" method="POST">
+      <input type="email" name="EMAIL" placeholder="Your email address" required autocomplete="email">
+      <input type="text" name="email_address_check" value="" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="hidden" name="locale" value="en">
       <button class="btn" type="submit" style="border:none;cursor:pointer;width:100%">Send me the checklist</button>
-      <p class="fine">We&rsquo;ll email the checklist once. No spam, unsubscribe anytime.</p>
+      <p class="fine">One confirmation email, then the checklist. No spam, unsubscribe anytime.</p>
     </form>
   </div>
 </section>
@@ -273,14 +275,7 @@ var AFFILIATE_URL = "https://uswaterrevolution.com/#aff=PratikDhruve33";
     a.setAttribute("target", "_blank");
     a.setAttribute("rel", "nofollow sponsored noopener");
   });
-  // placeholder lead form: warn in console until Brevo is connected
-  var form = document.getElementById("leadForm");
-  form.addEventListener("submit", function(e){
-    if (form.getAttribute("action").indexOf("PASTE_BREVO") === 0) {
-      e.preventDefault();
-      alert("Email capture isn't connected yet — the site owner needs to add the Brevo form action.");
-    }
-  });
+  // lead form posts directly to Brevo (double opt-in) — no JS interception
   var io = new IntersectionObserver(function(es){
     es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
   }, {threshold: 0.12});
